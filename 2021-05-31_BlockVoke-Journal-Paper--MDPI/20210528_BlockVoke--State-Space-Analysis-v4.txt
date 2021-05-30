@@ -1,0 +1,452 @@
+CPN Tools state space report for:
+/cygdrive/Z/home/anant/gits/2021_blockvoke-cpn-journal-paper/cpn-model/ss/BlockVoke-v04.cpn
+Report generated: Thu May 27 11:20:12 2021
+
+
+ Statistics
+------------------------------------------------------------------------
+
+  State Space
+     Nodes:  181808
+     Arcs:   730324
+     Secs:   1493
+     Status: Full
+
+  Scc Graph
+     Nodes:  181808
+     Arcs:   730324
+     Secs:   123
+
+
+ Boundedness Properties
+------------------------------------------------------------------------
+
+  Best Integer Bounds
+                             Upper      Lower
+     Add_OP_RETURN_script'Added_BlockVoke_Identifier 1
+                             1          0
+     Add_OP_RETURN_script'Added_CA_Key_ID 1
+                             1          0
+     Add_OP_RETURN_script'Added_Certificate_Date_Of_Issuance 1
+                             1          0
+     Add_OP_RETURN_script'Added_Certificate_Fingerprint 1
+                             1          0
+     Add_OP_RETURN_script'Added_RFC_5280_Revocation_Code 1
+                             1          0
+     Create_Revocation_Transactions'TXRevoke_Transaction_Created 1
+                             1          0
+     Create_Revocation_Transactions'TxFund_Transaction_Created 1
+                             1          0
+     Create_Revocation_Transactions'Wallet_to_be_updated_after_TxFund_Transaction 1
+                             1          1
+     Create_Revocation_Transactions'wallet_to_be_updated_after_TxRevoke_Creation 1
+                             1          1
+     Create_TxFund_Transaction'Added_Input_address 1
+                             1          0
+     Create_TxFund_Transaction'Added_Output_address 1
+                             1          0
+     Create_TxFund_Transaction'Funds_Prepared 1
+                             1          0
+     Create_TxFund_Transaction'Previous_output_hash_added 1
+                             1          0
+     Create_TxFund_Transaction'Wallet_Ready 1
+                             1          0
+     Create_TxRevoke_Transaction'Input_Address_added 1
+                             1          0
+     Create_TxRevoke_Transaction'OP_RETURN_script_added 1
+                             1          0
+     Create_TxRevoke_Transaction'Output_Address_added 1
+                             1          0
+     Create_TxRevoke_Transaction'Previous_Output_Hash_added 1
+                             1          0
+     Create_TxRevoke_Transaction'Wallet_Ready 1
+                             1          0
+     Generate_Certificate'CA_wants_to_Sign_Certificate 1
+                             1          0
+     Generate_Certificate'CA_wants_to_generate_wallet 1
+                             1          0
+     Generate_Certificate'CO_Identity_to_be_verified 1
+                             4          0
+     Generate_Certificate'Certificate_Generated 1
+                             4          0
+     Generate_Certificate'Certificate_Signed 1
+                             4          0
+     Generate_Certificate'Certificate_to_be_Signed 1
+                             1          0
+     Generate_Certificate'Date 1
+                             1          1
+     Generate_Certificate'Multisig_Wallet_to_be_Created 1
+                             4          0
+     Generate_Certificate'multisig_addresses 1
+                             4          0
+     MarkCertificate_as_Revoked'Revoked_Certificate_List 1
+                             1          1
+     Mine_Revocation_Transactions'Block_Counter 1
+                             1          1
+     Mine_Revocation_Transactions'Miner_Wants_to_Mine 1
+                             1          1
+     Mine_Revocation_Transactions'Nonce 1
+                             1          1
+     Mine_Revocation_Transactions'Nonce_Found 1
+                             1          0
+     Mine_Revocation_Transactions'TX_List_chosen 1
+                             1          0
+     Revoke_Certificate'Certificate_Revoked 1
+                             2          0
+     Revoke_Certificate'Mempool 1
+                             1          1
+     Revoke_Certificate'Mempool_Transactions 1
+                             4          0
+     Revoke_Certificate'Mined_Transactions 1
+                             4          0
+     Revoke_Certificate'New_Block_mined 1
+                             2          0
+     Revoke_Certificate'RV_Ready 1
+                             1          0
+     Revoke_Certificate'TX_PAIR_Ready 1
+                             2          0
+     Revoke_Certificate'TX_PAIR_Sent 1
+                             2          0
+     Top'CA_KeyPair 1        1          1
+     Top'CA_Wallet 1         1          1
+     Top'CA_wants_to_Generate_Certificate 1
+                             1          1
+     Top'CA_wants_to_revoke 1
+                             1          0
+     Top'CO_KeyPair 1        4          4
+     Top'CO_Wallet 1         4          4
+     Top'CO_wants_to_create_CSR 1
+                             4          0
+     Top'CO_wants_to_revoke 1
+                             1          0
+     Top'Certificate_Verified 1
+                             4          0
+     Top'Certificate_ready_to_be_verified_by_End_User 1
+                             4          0
+     Verify_Certificate'Certificate_Fingerprint_checked 1
+                             4          0
+
+  Best Upper Multi-set Bounds
+     Add_OP_RETURN_script'Added_BlockVoke_Identifier 1
+                         1`("BLOCKVOKE",0,"","","")
+     Add_OP_RETURN_script'Added_CA_Key_ID 1
+                         1`("BLOCKVOKE",1803,"12.02.2021","unused","")++
+1`("BLOCKVOKE",1825,"12.02.2021","cACompromise","ca1")
+     Add_OP_RETURN_script'Added_Certificate_Date_Of_Issuance 1
+                         1`("BLOCKVOKE",1803,"12.02.2021","","")++
+1`("BLOCKVOKE",1825,"12.02.2021","","")
+     Add_OP_RETURN_script'Added_Certificate_Fingerprint 1
+                         1`("BLOCKVOKE",1803,"","","")++
+1`("BLOCKVOKE",1825,"","","")
+     Add_OP_RETURN_script'Added_RFC_5280_Revocation_Code 1
+                         1`("BLOCKVOKE",1803,"12.02.2021","unused","")++
+1`("BLOCKVOKE",1825,"12.02.2021","cACompromise","")
+     Create_Revocation_Transactions'TXRevoke_Transaction_Created 1
+                         1`("0x1618","0x1474",10,1,"0x1",("BLOCKVOKE",1825,"12.02.2021","cACompromise","ca1"),"0xmultisig4")++
+1`("0x90","0x2770",10,1,"0x4",("BLOCKVOKE",1803,"12.02.2021","unused",""),"0xmultisig2")
+     Create_Revocation_Transactions'TxFund_Transaction_Created 1
+                         1`("0x1474","0x001",11,1,"0xmultisig4",("",0,"","",""),"0x1")++
+1`("0x2770","0x004",11,1,"0xmultisig2",("",0,"","",""),"0x4")
+     Create_Revocation_Transactions'Wallet_to_be_updated_after_TxFund_Transaction 1
+                         1`[("",("",""),"",0)]++
+1`[("0x1",("ca1_wallet_pubkey","ca1_wallet_privkey"),"0x1474",88)]++
+1`[("0x4",("co2_pubkey","co2_privkey"),"0x2770",88)]
+     Create_Revocation_Transactions'wallet_to_be_updated_after_TxRevoke_Creation 1
+                         1`[("",("",""),"",0)]++
+1`[("0x1",("ca1_wallet_pubkey","ca1_wallet_privkey"),"0x1618",98)]++
+1`[("0x4",("co2_pubkey","co2_privkey"),"0x90",98)]
+     Create_TxFund_Transaction'Added_Input_address 1
+                         1`("","0x001",11,1,"",("",0,"","",""),"0x1")++
+1`("","0x004",11,1,"",("",0,"","",""),"0x4")
+     Create_TxFund_Transaction'Added_Output_address 1
+                         1`("","0x001",11,1,"0xmultisig4",("",0,"","",""),"0x1")++
+1`("","0x004",11,1,"0xmultisig2",("",0,"","",""),"0x4")
+     Create_TxFund_Transaction'Funds_Prepared 1
+                         1`("","0x001",11,1,"",("",0,"","",""),"")++
+1`("","0x004",11,1,"",("",0,"","",""),"")
+     Create_TxFund_Transaction'Previous_output_hash_added 1
+                         1`("","0x001",0,0,"",("",0,"","",""),"")++
+1`("","0x004",0,0,"",("",0,"","",""),"")
+     Create_TxFund_Transaction'Wallet_Ready 1
+                         1`("0x1",("ca1_wallet_pubkey","ca1_wallet_privkey"),"0x001",100)++
+1`("0x4",("co2_pubkey","co2_privkey"),"0x004",100)
+     Create_TxRevoke_Transaction'Input_Address_added 1
+                         1`("","0x1474",10,1,"",("",0,"","",""),"0xmultisig4")++
+1`("","0x2770",10,1,"",("",0,"","",""),"0xmultisig2")
+     Create_TxRevoke_Transaction'OP_RETURN_script_added 1
+                         1`("","0x1474",10,1,"0x1",("BLOCKVOKE",1825,"12.02.2021","cACompromise","ca1"),"0xmultisig4")++
+1`("","0x2770",10,1,"0x4",("BLOCKVOKE",1803,"12.02.2021","unused",""),"0xmultisig2")
+     Create_TxRevoke_Transaction'Output_Address_added 1
+                         1`("","0x1474",10,1,"0x1",("",0,"","",""),"0xmultisig4")++
+1`("","0x2770",10,1,"0x4",("",0,"","",""),"0xmultisig2")
+     Create_TxRevoke_Transaction'Previous_Output_Hash_added 1
+                         1`("","0x1474",10,1,"",("",0,"","",""),"")++
+1`("","0x2770",10,1,"",("",0,"","",""),"")
+     Create_TxRevoke_Transaction'Wallet_Ready 1
+                         1`("0x1",("ca1_wallet_pubkey","ca1_wallet_privkey"),"0x1474",88)++
+1`("0x4",("co2_pubkey","co2_privkey"),"0x2770",88)
+     Generate_Certificate'CA_wants_to_Sign_Certificate 1
+                         1`("CA1",(25877,5),(25877,20429),"ca1")
+     Generate_Certificate'CA_wants_to_generate_wallet 1
+                         1`"0x1"
+     Generate_Certificate'CO_Identity_to_be_verified 1
+                         1`(("www.co1-website.com",(33017,7),"co1_website","CA1",(25877,5),"ca1","02/02/2021","02/02/2022","",0,0,""),"0x3")++
+1`(("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","",0,0,""),"0x4")++
+1`(("www.co3-website.com",(69451,5),"co3_website","CA1",(25877,5),"ca1","04/04/2021","04/04/2022","",0,0,""),"0x5")++
+1`(("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","",0,0,""),"0x6")
+     Generate_Certificate'Certificate_Generated 1
+                         1`("www.co1-website.com",(33017,7),"co1_website","CA1",(25877,5),"ca1","02/02/2021","02/02/2022","0xmultisig1",13470,1144,"12.02.2021")++
+1`("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","0xmultisig2",10485,1803,"12.02.2021")++
+1`("www.co3-website.com",(69451,5),"co3_website","CA1",(25877,5),"ca1","04/04/2021","04/04/2022","0xmultisig3",7576,2194,"12.02.2021")++
+1`("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","0xmultisig4",9832,1825,"12.02.2021")
+     Generate_Certificate'Certificate_Signed 1
+                         1`("www.co1-website.com",(33017,7),"co1_website","CA1",(25877,5),"ca1","02/02/2021","02/02/2022","0xmultisig1",13470,0,"12.02.2021")++
+1`("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","0xmultisig2",10485,0,"12.02.2021")++
+1`("www.co3-website.com",(69451,5),"co3_website","CA1",(25877,5),"ca1","04/04/2021","04/04/2022","0xmultisig3",7576,0,"12.02.2021")++
+1`("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","0xmultisig4",9832,0,"12.02.2021")
+     Generate_Certificate'Certificate_to_be_Signed 1
+                         1`("www.co1-website.com",(33017,7),"co1_website","CA1",(25877,5),"ca1","02/02/2021","02/02/2022","0xmultisig1",0,0,"12.02.2021")++
+1`("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","0xmultisig2",0,0,"12.02.2021")++
+1`("www.co3-website.com",(69451,5),"co3_website","CA1",(25877,5),"ca1","04/04/2021","04/04/2022","0xmultisig3",0,0,"12.02.2021")++
+1`("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","0xmultisig4",0,0,"12.02.2021")
+     Generate_Certificate'Date 1
+                         1`"12.02.2021"
+     Generate_Certificate'Multisig_Wallet_to_be_Created 1
+                         1`(("www.co1-website.com",(33017,7),"co1_website","CA1",(25877,5),"ca1","02/02/2021","02/02/2022","",0,0,""),"0x3")++
+1`(("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","",0,0,""),"0x4")++
+1`(("www.co3-website.com",(69451,5),"co3_website","CA1",(25877,5),"ca1","04/04/2021","04/04/2022","",0,0,""),"0x5")++
+1`(("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","",0,0,""),"0x6")
+     Generate_Certificate'multisig_addresses 1
+                         1`"0xmultisig1"++
+1`"0xmultisig2"++
+1`"0xmultisig3"++
+1`"0xmultisig4"
+     MarkCertificate_as_Revoked'Revoked_Certificate_List 1
+                         1`[]++
+1`[("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","0xmultisig2",10485,1803,"12.02.2021")]++
+1`[("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","0xmultisig2",10485,1803,"12.02.2021"),("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","0xmultisig4",9832,1825,"12.02.2021")]++
+1`[("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","0xmultisig4",9832,1825,"12.02.2021")]++
+1`[("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","0xmultisig4",9832,1825,"12.02.2021"),("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","0xmultisig2",10485,1803,"12.02.2021")]
+     Mine_Revocation_Transactions'Block_Counter 1
+                         1`121++
+1`122++
+1`123
+     Mine_Revocation_Transactions'Miner_Wants_to_Mine 1
+                         1`true
+     Mine_Revocation_Transactions'Nonce 1
+                         1`100++
+1`101++
+1`102
+     Mine_Revocation_Transactions'Nonce_Found 1
+                         1`100++
+1`101
+     Mine_Revocation_Transactions'TX_List_chosen 1
+                         1`[("0x1474","0x001",11,1,"0xmultisig4",("",0,"","",""),"0x1"),("0x1618","0x1474",10,1,"0x1",("BLOCKVOKE",1825,"12.02.2021","cACompromise","ca1"),"0xmultisig4")]++
+1`[("0x2770","0x004",11,1,"0xmultisig2",("",0,"","",""),"0x4"),("0x90","0x2770",10,1,"0x4",("BLOCKVOKE",1803,"12.02.2021","unused",""),"0xmultisig2")]
+     Revoke_Certificate'Certificate_Revoked 1
+                         1`("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","0xmultisig2",10485,1803,"12.02.2021")++
+1`("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","0xmultisig4",9832,1825,"12.02.2021")
+     Revoke_Certificate'Mempool 1
+                         1`[]++
+1`[("0x1474","0x001",11,1,"0xmultisig4",("",0,"","",""),"0x1"),("0x1618","0x1474",10,1,"0x1",("BLOCKVOKE",1825,"12.02.2021","cACompromise","ca1"),"0xmultisig4")]++
+1`[("0x1474","0x001",11,1,"0xmultisig4",("",0,"","",""),"0x1"),("0x1618","0x1474",10,1,"0x1",("BLOCKVOKE",1825,"12.02.2021","cACompromise","ca1"),"0xmultisig4"),("0x2770","0x004",11,1,"0xmultisig2",("",0,"","",""),"0x4"),("0x90","0x2770",10,1,"0x4",("BLOCKVOKE",1803,"12.02.2021","unused",""),"0xmultisig2")]++
+1`[("0x2770","0x004",11,1,"0xmultisig2",("",0,"","",""),"0x4"),("0x90","0x2770",10,1,"0x4",("BLOCKVOKE",1803,"12.02.2021","unused",""),"0xmultisig2")]++
+1`[("0x2770","0x004",11,1,"0xmultisig2",("",0,"","",""),"0x4"),("0x90","0x2770",10,1,"0x4",("BLOCKVOKE",1803,"12.02.2021","unused",""),"0xmultisig2"),("0x1474","0x001",11,1,"0xmultisig4",("",0,"","",""),"0x1"),("0x1618","0x1474",10,1,"0x1",("BLOCKVOKE",1825,"12.02.2021","cACompromise","ca1"),"0xmultisig4")]
+     Revoke_Certificate'Mempool_Transactions 1
+                         1`("0x1474","0x001",11,1,"0xmultisig4",("",0,"","",""),"0x1")++
+1`("0x1618","0x1474",10,1,"0x1",("BLOCKVOKE",1825,"12.02.2021","cACompromise","ca1"),"0xmultisig4")++
+1`("0x2770","0x004",11,1,"0xmultisig2",("",0,"","",""),"0x4")++
+1`("0x90","0x2770",10,1,"0x4",("BLOCKVOKE",1803,"12.02.2021","unused",""),"0xmultisig2")
+     Revoke_Certificate'Mined_Transactions 1
+                         1`("0x1474","0x001",11,1,"0xmultisig4",("",0,"","",""),"0x1")++
+1`("0x1618","0x1474",10,1,"0x1",("BLOCKVOKE",1825,"12.02.2021","cACompromise","ca1"),"0xmultisig4")++
+1`("0x2770","0x004",11,1,"0xmultisig2",("",0,"","",""),"0x4")++
+1`("0x90","0x2770",10,1,"0x4",("BLOCKVOKE",1803,"12.02.2021","unused",""),"0xmultisig2")
+     Revoke_Certificate'New_Block_mined 1
+                         1`((121,100),[("0x1474","0x001",11,1,"0xmultisig4",("",0,"","",""),"0x1"),("0x1618","0x1474",10,1,"0x1",("BLOCKVOKE",1825,"12.02.2021","cACompromise","ca1"),"0xmultisig4")])++
+1`((121,100),[("0x2770","0x004",11,1,"0xmultisig2",("",0,"","",""),"0x4"),("0x90","0x2770",10,1,"0x4",("BLOCKVOKE",1803,"12.02.2021","unused",""),"0xmultisig2")])++
+1`((122,101),[("0x1474","0x001",11,1,"0xmultisig4",("",0,"","",""),"0x1"),("0x1618","0x1474",10,1,"0x1",("BLOCKVOKE",1825,"12.02.2021","cACompromise","ca1"),"0xmultisig4")])++
+1`((122,101),[("0x2770","0x004",11,1,"0xmultisig2",("",0,"","",""),"0x4"),("0x90","0x2770",10,1,"0x4",("BLOCKVOKE",1803,"12.02.2021","unused",""),"0xmultisig2")])
+     Revoke_Certificate'RV_Ready 1
+                         1`(1803,false,10,"0x4",1,"unused","0xmultisig2","12.02.2021","ca1")++
+1`(1825,true,10,"0x1",1,"cACompromise","0xmultisig4","12.02.2021","ca1")
+     Revoke_Certificate'TX_PAIR_Ready 1
+                         1`[("0x1474","0x001",11,1,"0xmultisig4",("",0,"","",""),"0x1"),("0x1618","0x1474",10,1,"0x1",("BLOCKVOKE",1825,"12.02.2021","cACompromise","ca1"),"0xmultisig4")]++
+1`[("0x2770","0x004",11,1,"0xmultisig2",("",0,"","",""),"0x4"),("0x90","0x2770",10,1,"0x4",("BLOCKVOKE",1803,"12.02.2021","unused",""),"0xmultisig2")]
+     Revoke_Certificate'TX_PAIR_Sent 1
+                         1`[("0x1474","0x001",11,1,"0xmultisig4",("",0,"","",""),"0x1"),("0x1618","0x1474",10,1,"0x1",("BLOCKVOKE",1825,"12.02.2021","cACompromise","ca1"),"0xmultisig4")]++
+1`[("0x2770","0x004",11,1,"0xmultisig2",("",0,"","",""),"0x4"),("0x90","0x2770",10,1,"0x4",("BLOCKVOKE",1803,"12.02.2021","unused",""),"0xmultisig2")]
+     Top'CA_KeyPair 1    1`("CA1",(25877,5),(25877,20429),"ca1")
+     Top'CA_Wallet 1     1`("0x1",("ca1_wallet_pubkey","ca1_wallet_privkey"),"0x001",100)++
+1`("0x1",("ca1_wallet_pubkey","ca1_wallet_privkey"),"0x1474",88)++
+1`("0x1",("ca1_wallet_pubkey","ca1_wallet_privkey"),"0x1618",98)
+     Top'CA_wants_to_Generate_Certificate 1
+                         1`true
+     Top'CA_wants_to_revoke 1
+                         1`(1825,true,10,"0x1",1,"cACompromise","0xmultisig4","12.02.2021","ca1")
+     Top'CO_KeyPair 1    1`("www.co1-website.com",(33017,7),(33017,4663),"co1_website")++
+1`("www.co2-website.com",(83767,13),(83767,6397),"co2_website")++
+1`("www.co3-website.com",(69451,5),(69451,13781),"co3_website")++
+1`("www.co4-website.com",(50299,3),(50299,33227),"co4_website")
+     Top'CO_Wallet 1     1`("0x3",("co1_pubkey","co1_privkey"),"0x003",100)++
+1`("0x4",("co2_pubkey","co2_privkey"),"0x004",100)++
+1`("0x4",("co2_pubkey","co2_privkey"),"0x2770",88)++
+1`("0x4",("co2_pubkey","co2_privkey"),"0x90",98)++
+1`("0x5",("co3_pubkey","co3_privkey"),"0x005",100)++
+1`("0x6",("co4_pubkey","co4_privkey"),"0x006",100)
+     Top'CO_wants_to_create_CSR 1
+                         1`(("www.co1-website.com",(33017,7),"co1_website","CA1",(25877,5),"ca1","02/02/2021","02/02/2022","",0,0,""),"0x3")++
+1`(("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","",0,0,""),"0x4")++
+1`(("www.co3-website.com",(69451,5),"co3_website","CA1",(25877,5),"ca1","04/04/2021","04/04/2022","",0,0,""),"0x5")++
+1`(("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","",0,0,""),"0x6")
+     Top'CO_wants_to_revoke 1
+                         1`(1803,false,10,"0x4",1,"unused","0xmultisig2","12.02.2021","ca1")
+     Top'Certificate_Verified 1
+                         1`("www.co1-website.com",(33017,7),"co1_website","CA1",(25877,5),"ca1","02/02/2021","02/02/2022","0xmultisig1",13470,1144,"12.02.2021")++
+1`("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","0xmultisig2",10485,1803,"12.02.2021")++
+1`("www.co3-website.com",(69451,5),"co3_website","CA1",(25877,5),"ca1","04/04/2021","04/04/2022","0xmultisig3",7576,2194,"12.02.2021")++
+1`("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","0xmultisig4",9832,1825,"12.02.2021")
+     Top'Certificate_ready_to_be_verified_by_End_User 1
+                         1`("www.co1-website.com",(33017,7),"co1_website","CA1",(25877,5),"ca1","02/02/2021","02/02/2022","0xmultisig1",13470,1144,"12.02.2021")++
+1`("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","0xmultisig2",10485,1803,"12.02.2021")++
+1`("www.co3-website.com",(69451,5),"co3_website","CA1",(25877,5),"ca1","04/04/2021","04/04/2022","0xmultisig3",7576,2194,"12.02.2021")++
+1`("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","0xmultisig4",9832,1825,"12.02.2021")
+     Verify_Certificate'Certificate_Fingerprint_checked 1
+                         1`("www.co1-website.com",(33017,7),"co1_website","CA1",(25877,5),"ca1","02/02/2021","02/02/2022","0xmultisig1",13470,1144,"12.02.2021")++
+1`("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","0xmultisig2",10485,1803,"12.02.2021")++
+1`("www.co3-website.com",(69451,5),"co3_website","CA1",(25877,5),"ca1","04/04/2021","04/04/2022","0xmultisig3",7576,2194,"12.02.2021")++
+1`("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","0xmultisig4",9832,1825,"12.02.2021")
+
+  Best Lower Multi-set Bounds
+     Add_OP_RETURN_script'Added_BlockVoke_Identifier 1
+                         empty
+     Add_OP_RETURN_script'Added_CA_Key_ID 1
+                         empty
+     Add_OP_RETURN_script'Added_Certificate_Date_Of_Issuance 1
+                         empty
+     Add_OP_RETURN_script'Added_Certificate_Fingerprint 1
+                         empty
+     Add_OP_RETURN_script'Added_RFC_5280_Revocation_Code 1
+                         empty
+     Create_Revocation_Transactions'TXRevoke_Transaction_Created 1
+                         empty
+     Create_Revocation_Transactions'TxFund_Transaction_Created 1
+                         empty
+     Create_Revocation_Transactions'Wallet_to_be_updated_after_TxFund_Transaction 1
+                         empty
+     Create_Revocation_Transactions'wallet_to_be_updated_after_TxRevoke_Creation 1
+                         empty
+     Create_TxFund_Transaction'Added_Input_address 1
+                         empty
+     Create_TxFund_Transaction'Added_Output_address 1
+                         empty
+     Create_TxFund_Transaction'Funds_Prepared 1
+                         empty
+     Create_TxFund_Transaction'Previous_output_hash_added 1
+                         empty
+     Create_TxFund_Transaction'Wallet_Ready 1
+                         empty
+     Create_TxRevoke_Transaction'Input_Address_added 1
+                         empty
+     Create_TxRevoke_Transaction'OP_RETURN_script_added 1
+                         empty
+     Create_TxRevoke_Transaction'Output_Address_added 1
+                         empty
+     Create_TxRevoke_Transaction'Previous_Output_Hash_added 1
+                         empty
+     Create_TxRevoke_Transaction'Wallet_Ready 1
+                         empty
+     Generate_Certificate'CA_wants_to_Sign_Certificate 1
+                         empty
+     Generate_Certificate'CA_wants_to_generate_wallet 1
+                         empty
+     Generate_Certificate'CO_Identity_to_be_verified 1
+                         empty
+     Generate_Certificate'Certificate_Generated 1
+                         empty
+     Generate_Certificate'Certificate_Signed 1
+                         empty
+     Generate_Certificate'Certificate_to_be_Signed 1
+                         empty
+     Generate_Certificate'Date 1
+                         1`"12.02.2021"
+     Generate_Certificate'Multisig_Wallet_to_be_Created 1
+                         empty
+     Generate_Certificate'multisig_addresses 1
+                         empty
+     MarkCertificate_as_Revoked'Revoked_Certificate_List 1
+                         empty
+     Mine_Revocation_Transactions'Block_Counter 1
+                         empty
+     Mine_Revocation_Transactions'Miner_Wants_to_Mine 1
+                         1`true
+     Mine_Revocation_Transactions'Nonce 1
+                         empty
+     Mine_Revocation_Transactions'Nonce_Found 1
+                         empty
+     Mine_Revocation_Transactions'TX_List_chosen 1
+                         empty
+     Revoke_Certificate'Certificate_Revoked 1
+                         empty
+     Revoke_Certificate'Mempool 1
+                         empty
+     Revoke_Certificate'Mempool_Transactions 1
+                         empty
+     Revoke_Certificate'Mined_Transactions 1
+                         empty
+     Revoke_Certificate'New_Block_mined 1
+                         empty
+     Revoke_Certificate'RV_Ready 1
+                         empty
+     Revoke_Certificate'TX_PAIR_Ready 1
+                         empty
+     Revoke_Certificate'TX_PAIR_Sent 1
+                         empty
+     Top'CA_KeyPair 1    1`("CA1",(25877,5),(25877,20429),"ca1")
+     Top'CA_Wallet 1     empty
+     Top'CA_wants_to_Generate_Certificate 1
+                         1`true
+     Top'CA_wants_to_revoke 1
+                         empty
+     Top'CO_KeyPair 1    1`("www.co1-website.com",(33017,7),(33017,4663),"co1_website")++
+1`("www.co2-website.com",(83767,13),(83767,6397),"co2_website")++
+1`("www.co3-website.com",(69451,5),(69451,13781),"co3_website")++
+1`("www.co4-website.com",(50299,3),(50299,33227),"co4_website")
+     Top'CO_Wallet 1     1`("0x3",("co1_pubkey","co1_privkey"),"0x003",100)++
+1`("0x5",("co3_pubkey","co3_privkey"),"0x005",100)++
+1`("0x6",("co4_pubkey","co4_privkey"),"0x006",100)
+     Top'CO_wants_to_create_CSR 1
+                         empty
+     Top'CO_wants_to_revoke 1
+                         empty
+     Top'Certificate_Verified 1
+                         empty
+     Top'Certificate_ready_to_be_verified_by_End_User 1
+                         empty
+     Verify_Certificate'Certificate_Fingerprint_checked 1
+                         empty
+
+
+ Home Properties
+------------------------------------------------------------------------
+
+  Home Markings
+     None
+
+
+ Liveness Properties
+------------------------------------------------------------------------
+
+  Dead Markings
+     [181807,181808]
+
+  Dead Transition Instances
+     None
+
+  Live Transition Instances
+     None
+
+
+ Fairness Properties
+------------------------------------------------------------------------
+     No infinite occurrence sequences.
