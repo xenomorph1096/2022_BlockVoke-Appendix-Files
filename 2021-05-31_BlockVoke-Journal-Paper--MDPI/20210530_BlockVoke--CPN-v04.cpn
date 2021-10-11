@@ -432,9 +432,9 @@ fun hash s = combine (explode s) ;</layout>
               <id>CSR</id>
               <product>
                 <id>BlockVoke_Cert</id>
-                <id>Wallet_Addr</id>
+                <id>Wallet_PublicKey</id>
               </product>
-              <layout>colset CSR = product BlockVoke_Cert * Wallet_Addr;</layout>
+              <layout>colset CSR = product BlockVoke_Cert * Wallet_PublicKey;</layout>
             </color>
             <ml id="ID1458130121">fun addMultisigAndDate((cocn, copub, cokid, cacn, capub, cakid, cvf, cvt, cma, cs, cf, cdoa), ma, doa) = (cocn, copub, cokid, cacn, capub, cakid, cvf, cvt, ma, cs, cf, doa);
               <layout>fun addMultisigAndDate((cocn, copub, cokid, cacn, capub, cakid, cvf, cvt, cma, cs, cf, cdoa), ma, doa) = (cocn, copub, cokid, cacn, capub, cakid, cvf, cvt, ma, cs, cf, doa);</layout>
@@ -1092,14 +1092,14 @@ txph, txv, f, txoa, (bvi, cf, cdoa, rfc,cki), txia);</layout>
                                   1`(1825, true, 10, &quot;0x1&quot;, 1, &quot;cACompromise&quot;, &quot;0xmultisig4&quot;,
                                           &quot;12.02.2021&quot;, &quot;ca1&quot;);</layout>
           </ml>
-          <ml id="ID1467510138">fun checkmultisig(walletaddr, maddr) = if (maddr = &quot;0xmultisig1&quot; andalso walletaddr = &quot;0x3&quot;) then true
-else (if maddr = &quot;0xmultisig2&quot; andalso walletaddr = &quot;0x4&quot; then true else (
-        (if maddr = &quot;0xmultisig3&quot; andalso walletaddr = &quot;0x5&quot; then true else (
-        (if maddr = &quot;0xmultisig4&quot; andalso walletaddr = &quot;0x6&quot; then true else false)))));
-            <layout>fun checkmultisig(walletaddr, maddr) = if (maddr = &quot;0xmultisig1&quot; andalso walletaddr = &quot;0x3&quot;) then true
-else (if maddr = &quot;0xmultisig2&quot; andalso walletaddr = &quot;0x4&quot; then true else (
-        (if maddr = &quot;0xmultisig3&quot; andalso walletaddr = &quot;0x5&quot; then true else (
-        (if maddr = &quot;0xmultisig4&quot; andalso walletaddr = &quot;0x6&quot; then true else false)))));</layout>
+          <ml id="ID1467510138">fun checkmultisig(walletkey, maddr) = if (maddr = &quot;0xmultisig1&quot; andalso walletkey = &quot;co1_pubkey&quot;) then true
+else (if maddr = &quot;0xmultisig2&quot; andalso walletkey = &quot;co2_pubkey&quot; then true else (
+        (if maddr = &quot;0xmultisig3&quot; andalso walletkey = &quot;co3_pubkey&quot; then true else (
+        (if maddr = &quot;0xmultisig4&quot; andalso walletkey = &quot;co4_pubkey&quot; then true else false)))));
+            <layout>fun checkmultisig(walletkey, maddr) = if (maddr = &quot;0xmultisig1&quot; andalso walletkey = &quot;co1_pubkey&quot;) then true
+else (if maddr = &quot;0xmultisig2&quot; andalso walletkey = &quot;co2_pubkey&quot; then true else (
+        (if maddr = &quot;0xmultisig3&quot; andalso walletkey = &quot;co3_pubkey&quot; then true else (
+        (if maddr = &quot;0xmultisig4&quot; andalso walletkey = &quot;co4_pubkey&quot; then true else false)))));</layout>
           </ml>
         </block>
       </block>
@@ -2951,8 +2951,8 @@ Certificate Signing Request
                  h="58.000000"/>
         <token x="-10.000000"
                y="0.000000"/>
-        <marking x="-7.000000"
-                 y="-74.000000"
+        <marking x="27.000000"
+                 y="83.000000"
                  hidden="true">
           <snap snap_id="0"
                 anchor.horizontal="1"
@@ -3466,12 +3466,12 @@ Signed</text>
                  h="48.000000"/>
         <token x="-10.000000"
                y="0.000000"/>
-        <marking x="-4.000000"
-                 y="45.000000"
-                 hidden="true">
+        <marking x="24.000000"
+                 y="-113.000000"
+                 hidden="false">
           <snap snap_id="0"
                 anchor.horizontal="1"
-                anchor.vertical="3"/>
+                anchor.vertical="1"/>
         </marking>
         <type id="ID1416837703">
           <posattr x="-662.000000"
@@ -4490,7 +4490,7 @@ Signed Certificate</text>
                     bold="false"/>
         </bendpoint>
         <annot id="ID1413122465">
-          <posattr x="-221.000000"
+          <posattr x="-205.000000"
                    y="335.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -4501,7 +4501,7 @@ Signed Certificate</text>
           <textattr colour="Black"
                     bold="false"/>
           <text tool="CPN Tools"
-                version="4.0.1">(#1 csr, #1 co_wallet)</text>
+                version="4.0.1">(#1 csr, #1 (#2 co_wallet))</text>
         </annot>
       </arc>
       <arc id="ID1413126577"
@@ -5063,8 +5063,8 @@ multisig_addr, cert_doi)</text>
                     bold="false"/>
         </bendpoint>
         <annot id="ID1417189353">
-          <posattr x="-398.000000"
-                   y="497.000000"/>
+          <posattr x="-394.000000"
+                   y="502.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -6250,7 +6250,7 @@ checked</text>
                y="0.000000"/>
         <marking x="4.000000"
                  y="37.000000"
-                 hidden="false">
+                 hidden="true">
           <snap snap_id="0"
                 anchor.horizontal="1"
                 anchor.vertical="2"/>
@@ -6302,7 +6302,7 @@ checked</text>
                y="0.000000"/>
         <marking x="-14.000000"
                  y="0.000000"
-                 hidden="false">
+                 hidden="true">
           <snap snap_id="1"
                 anchor.horizontal="1"
                 anchor.vertical="1"/>
@@ -19607,7 +19607,7 @@ wallet_list2 =
         <placeend idref="ID1477129914"/>
         <bendpoint id="ID1477130113"
                    serial="1">
-          <posattr x="137.144000"
+          <posattr x="137.000000"
                    y="-168.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
@@ -19620,8 +19620,8 @@ wallet_list2 =
         </bendpoint>
         <bendpoint id="ID1477130114"
                    serial="2">
-          <posattr x="137.144000"
-                   y="113.926000"/>
+          <posattr x="137.000000"
+                   y="113.000000"/>
           <fillattr colour="White"
                     pattern="Solid"
                     filled="false"/>
@@ -22275,12 +22275,12 @@ mined</text>
                  h="56.000000"/>
         <token x="-10.000000"
                y="0.000000"/>
-        <marking x="0.000000"
-                 y="0.000000"
-                 hidden="false">
+        <marking x="83.000000"
+                 y="82.000000"
+                 hidden="true">
           <snap snap_id="0"
-                anchor.horizontal="0"
-                anchor.vertical="0"/>
+                anchor.horizontal="3"
+                anchor.vertical="2"/>
         </marking>
         <type id="ID1425145212">
           <posattr x="1206.000000"
@@ -24133,17 +24133,7 @@ Transactions</text>
           <text>&lt;same as model&gt;</text>
         </value>
       </option>
-      <option name="extensions.10004.enable">
-        <value>
-          <boolean>true</boolean>
-        </value>
-      </option>
       <option name="extensions.10007.enable">
-        <value>
-          <boolean>true</boolean>
-        </value>
-      </option>
-      <option name="extensions.10003.enable">
         <value>
           <boolean>true</boolean>
         </value>
@@ -24153,17 +24143,7 @@ Transactions</text>
           <boolean>true</boolean>
         </value>
       </option>
-      <option name="extensions.10006.enable">
-        <value>
-          <boolean>true</boolean>
-        </value>
-      </option>
       <option name="extensions.10005.enable">
-        <value>
-          <boolean>true</boolean>
-        </value>
-      </option>
-      <option name="extensions.10008.enable">
         <value>
           <boolean>true</boolean>
         </value>
@@ -24174,6 +24154,26 @@ Transactions</text>
         </value>
       </option>
       <option name="extensions.10002.enable">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="extensions.10003.enable">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="extensions.10006.enable">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="extensions.10004.enable">
+        <value>
+          <boolean>true</boolean>
+        </value>
+      </option>
+      <option name="extensions.10008.enable">
         <value>
           <boolean>true</boolean>
         </value>
@@ -24385,13 +24385,13 @@ Transactions</text>
       </option>
     </options>
     <binders>
-      <cpnbinder id="ID1477666048"
-                 x="562"
-                 y="160"
+      <cpnbinder id="ID1477998009"
+                 x="747"
+                 y="132"
                  width="741"
                  height="832">
         <sheets>
-          <cpnsheet id="ID1477666037"
+          <cpnsheet id="ID1477997998"
                     panx="351.000000"
                     pany="67.000000"
                     zoom="1.000000"
@@ -24400,29 +24400,9 @@ Transactions</text>
               <position value="0"/>
             </zorder>
           </cpnsheet>
-          <cpnsheet id="ID1477668486"
-                    panx="143.000000"
-                    pany="202.000000"
-                    zoom="1.000000"
-                    instance="ID1412660166">
-            <zorder>
-              <position value="0"/>
-            </zorder>
-          </cpnsheet>
-          <cpnsheet id="ID1477668618"
-                    panx="-1427.000000"
-                    pany="25.000000"
-                    zoom="1.000000"
-                    instance="ID1425145234">
-            <zorder>
-              <position value="0"/>
-            </zorder>
-          </cpnsheet>
         </sheets>
         <zorder>
           <position value="0"/>
-          <position value="1"/>
-          <position value="2"/>
         </zorder>
       </cpnbinder>
     </binders>
@@ -24502,8 +24482,10 @@ Transactions</text>
           <IndexNode expanded="false"/>
         </IndexNode>
       </IndexNode>
-      <IndexNode expanded="false"/>
-      <IndexNode expanded="true">
+      <IndexNode expanded="false">
+        <IndexNode expanded="false"/>
+      </IndexNode>
+      <IndexNode expanded="false">
         <IndexNode expanded="false">
           <IndexNode expanded="false"/>
           <IndexNode expanded="true"/>
@@ -24534,7 +24516,7 @@ Transactions</text>
           <IndexNode expanded="false"/>
           <IndexNode expanded="true"/>
         </IndexNode>
-        <IndexNode expanded="false">
+        <IndexNode expanded="true">
           <IndexNode expanded="true">
             <IndexNode expanded="false">
               <IndexNode expanded="false"/>
@@ -24548,7 +24530,7 @@ Transactions</text>
               <IndexNode expanded="true"/>
               <IndexNode expanded="true"/>
             </IndexNode>
-            <IndexNode expanded="false">
+            <IndexNode expanded="true">
               <IndexNode expanded="true"/>
               <IndexNode expanded="true"/>
               <IndexNode expanded="true"/>
@@ -24580,19 +24562,19 @@ Transactions</text>
               <IndexNode expanded="true"/>
               <IndexNode expanded="true"/>
               <IndexNode expanded="true"/>
+              <IndexNode expanded="true"/>
+              <IndexNode expanded="true"/>
+            </IndexNode>
+            <IndexNode expanded="false">
+              <IndexNode expanded="true"/>
+              <IndexNode expanded="true"/>
               <IndexNode expanded="false"/>
+              <IndexNode expanded="false"/>
+              <IndexNode expanded="true"/>
               <IndexNode expanded="true"/>
             </IndexNode>
             <IndexNode expanded="true">
               <IndexNode expanded="true"/>
-              <IndexNode expanded="true"/>
-              <IndexNode expanded="false"/>
-              <IndexNode expanded="false"/>
-              <IndexNode expanded="true"/>
-              <IndexNode expanded="true"/>
-            </IndexNode>
-            <IndexNode expanded="false">
-              <IndexNode expanded="true"/>
               <IndexNode expanded="false"/>
               <IndexNode expanded="false"/>
               <IndexNode expanded="false"/>
@@ -24602,7 +24584,7 @@ Transactions</text>
               <IndexNode expanded="true"/>
               <IndexNode expanded="true"/>
               <IndexNode expanded="true"/>
-              <IndexNode expanded="true"/>
+              <IndexNode expanded="false"/>
               <IndexNode expanded="false"/>
               <IndexNode expanded="false"/>
               <IndexNode expanded="false"/>
@@ -24620,7 +24602,7 @@ Transactions</text>
               </IndexNode>
             </IndexNode>
           </IndexNode>
-          <IndexNode expanded="false">
+          <IndexNode expanded="true">
             <IndexNode expanded="false"/>
             <IndexNode expanded="true"/>
             <IndexNode expanded="true"/>
@@ -24668,7 +24650,7 @@ Transactions</text>
             <IndexNode expanded="true"/>
             <IndexNode expanded="true"/>
           </IndexNode>
-          <IndexNode expanded="false">
+          <IndexNode expanded="true">
             <IndexNode expanded="true"/>
             <IndexNode expanded="true"/>
             <IndexNode expanded="true"/>
@@ -24676,7 +24658,7 @@ Transactions</text>
             <IndexNode expanded="false"/>
             <IndexNode expanded="true"/>
             <IndexNode expanded="true"/>
-            <IndexNode expanded="false"/>
+            <IndexNode expanded="true"/>
           </IndexNode>
         </IndexNode>
         <IndexNode expanded="false">
