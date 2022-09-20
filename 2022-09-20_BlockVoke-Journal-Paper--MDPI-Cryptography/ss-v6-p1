@@ -1,0 +1,270 @@
+CPN Tools state space report for:
+/cygdrive/Z/home/anant/gits/2021_BlockVoke-2nd-Anant-Paper/cpn/BlockVoke-v06-p1.cpn
+Report generated: Tue Sep 20 15:36:18 2022
+
+
+ Statistics
+------------------------------------------------------------------------
+
+  State Space
+     Nodes:  53248
+     Arcs:   189824
+     Secs:   168
+     Status: Full
+
+  Scc Graph
+     Nodes:  53248
+     Arcs:   189824
+     Secs:   2
+
+
+ Boundedness Properties
+------------------------------------------------------------------------
+
+  Best Integer Bounds
+                             Upper      Lower
+     ACME_Validation'ACME_Order_Created 1
+                             1          0
+     ACME_Validation'ACME_Order_Verified 1
+                             1          0
+     ACME_Validation'CA_receives_signed_validation_response 1
+                             1          0
+     ACME_Validation'CO_Receives_Validation_Request 1
+                             1          0
+     ACME_Validation'CO_Wallet_Validation_Challenge 1
+                             1          0
+     ACME_Validation'CSR_Identifiers_to_be_validated 1
+                             1          0
+     ACME_Validation'Random_Number 1
+                             1          1
+     Generate_Certificate'CA_wants_to_Sign_Certificate 1
+                             1          0
+     Generate_Certificate'CA_wants_to_generate_wallet 1
+                             1          0
+     Generate_Certificate'CSR_Identifiers_Validated 1
+                             4          0
+     Generate_Certificate'CSR_sent_to_CA 1
+                             4          0
+     Generate_Certificate'Certificate_Generated 1
+                             4          0
+     Generate_Certificate'Certificate_Signed 1
+                             4          0
+     Generate_Certificate'Certificate_to_be_Signed 1
+                             1          0
+     Generate_Certificate'Date 1
+                             1          1
+     Generate_Certificate'Multisig_Wallet_to_be_Created 1
+                             4          0
+     Generate_Certificate'multisig_addresses 1
+                             4          0
+     Register_ACME_Account'ACME_Registration_Request 1
+                             1          0
+     Register_ACME_Account'ACME_Registration_Request_Signed 1
+                             1          0
+     Top'ACME_Account_Registered 1
+                             4          0
+     Top'ACME_KeyPair 1      4          0
+     Top'CA_KeyPair 1        1          1
+     Top'CA_Wallet 1         1          1
+     Top'CO_KeyPair 1        4          4
+     Top'CO_Wallet 1         4          4
+     Top'CO_wants_to_create_CSR 1
+                             4          0
+     Top'Certificate_ready_to_be_verified_by_End_User 1
+                             4          0
+
+  Best Upper Multi-set Bounds
+     ACME_Validation'ACME_Order_Created 1
+                         1`("www.co1-website.com",(4309,41),634)++
+1`("www.co2-website.com",(5891,29),3902)++
+1`("www.co3-website.com",(3403,17),7299)++
+1`("www.co4-website.com",(5777,41),1494)
+     ACME_Validation'ACME_Order_Verified 1
+                         1`("www.co1-website.com",(4309,41),634)++
+1`("www.co2-website.com",(5891,29),3902)++
+1`("www.co3-website.com",(3403,17),7299)++
+1`("www.co4-website.com",(5777,41),1494)
+     ACME_Validation'CA_receives_signed_validation_response 1
+                         1`((3403,17),2714)++
+1`((4309,41),1689)++
+1`((5777,41),963)++
+1`((5891,29),2006)
+     ACME_Validation'CO_Receives_Validation_Request 1
+                         1`((3403,17),29)++
+1`((4309,41),29)++
+1`((5777,41),29)++
+1`((5891,29),29)
+     ACME_Validation'CO_Wallet_Validation_Challenge 1
+                         1`((3403,17),29)++
+1`((4309,41),29)++
+1`((5777,41),29)++
+1`((5891,29),29)
+     ACME_Validation'CSR_Identifiers_to_be_validated 1
+                         1`(("www.co1-website.com",(33017,7),"co1_website","CA1",(25877,5),"ca1","02/02/2021","02/02/2022","",0,0,""),"0x3")++
+1`(("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","",0,0,""),"0x4")++
+1`(("www.co3-website.com",(69451,5),"co3_website","CA1",(25877,5),"ca1","04/04/2021","04/04/2022","",0,0,""),"0x5")++
+1`(("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","",0,0,""),"0x6")
+     ACME_Validation'Random_Number 1
+                         1`29
+     Generate_Certificate'CA_wants_to_Sign_Certificate 1
+                         1`("CA1",(25877,5),(25877,20429),"ca1")
+     Generate_Certificate'CA_wants_to_generate_wallet 1
+                         1`"0x1"
+     Generate_Certificate'CSR_Identifiers_Validated 1
+                         1`(("www.co1-website.com",(33017,7),"co1_website","CA1",(25877,5),"ca1","02/02/2021","02/02/2022","",0,0,""),"0x3")++
+1`(("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","",0,0,""),"0x4")++
+1`(("www.co3-website.com",(69451,5),"co3_website","CA1",(25877,5),"ca1","04/04/2021","04/04/2022","",0,0,""),"0x5")++
+1`(("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","",0,0,""),"0x6")
+     Generate_Certificate'CSR_sent_to_CA 1
+                         1`(("www.co1-website.com",(33017,7),"co1_website","CA1",(25877,5),"ca1","02/02/2021","02/02/2022","",0,0,""),"co1_pubkey")++
+1`(("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","",0,0,""),"co2_pubkey")++
+1`(("www.co3-website.com",(69451,5),"co3_website","CA1",(25877,5),"ca1","04/04/2021","04/04/2022","",0,0,""),"co3_pubkey")++
+1`(("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","",0,0,""),"co4_pubkey")
+     Generate_Certificate'Certificate_Generated 1
+                         1`("www.co1-website.com",(33017,7),"co1_website","CA1",(25877,5),"ca1","02/02/2021","02/02/2022","0xmultisig1",13470,1144,"12.02.2021")++
+1`("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","0xmultisig2",10485,1803,"12.02.2021")++
+1`("www.co3-website.com",(69451,5),"co3_website","CA1",(25877,5),"ca1","04/04/2021","04/04/2022","0xmultisig3",7576,2194,"12.02.2021")++
+1`("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","0xmultisig4",9832,1825,"12.02.2021")
+     Generate_Certificate'Certificate_Signed 1
+                         1`("www.co1-website.com",(33017,7),"co1_website","CA1",(25877,5),"ca1","02/02/2021","02/02/2022","0xmultisig1",13470,0,"12.02.2021")++
+1`("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","0xmultisig2",10485,0,"12.02.2021")++
+1`("www.co3-website.com",(69451,5),"co3_website","CA1",(25877,5),"ca1","04/04/2021","04/04/2022","0xmultisig3",7576,0,"12.02.2021")++
+1`("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","0xmultisig4",9832,0,"12.02.2021")
+     Generate_Certificate'Certificate_to_be_Signed 1
+                         1`("www.co1-website.com",(33017,7),"co1_website","CA1",(25877,5),"ca1","02/02/2021","02/02/2022","0xmultisig1",0,0,"12.02.2021")++
+1`("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","0xmultisig2",0,0,"12.02.2021")++
+1`("www.co3-website.com",(69451,5),"co3_website","CA1",(25877,5),"ca1","04/04/2021","04/04/2022","0xmultisig3",0,0,"12.02.2021")++
+1`("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","0xmultisig4",0,0,"12.02.2021")
+     Generate_Certificate'Date 1
+                         1`"12.02.2021"
+     Generate_Certificate'Multisig_Wallet_to_be_Created 1
+                         1`(("www.co1-website.com",(33017,7),"co1_website","CA1",(25877,5),"ca1","02/02/2021","02/02/2022","",0,0,""),"co1_pubkey")++
+1`(("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","",0,0,""),"co2_pubkey")++
+1`(("www.co3-website.com",(69451,5),"co3_website","CA1",(25877,5),"ca1","04/04/2021","04/04/2022","",0,0,""),"co3_pubkey")++
+1`(("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","",0,0,""),"co4_pubkey")
+     Generate_Certificate'multisig_addresses 1
+                         1`"0xmultisig1"++
+1`"0xmultisig2"++
+1`"0xmultisig3"++
+1`"0xmultisig4"
+     Register_ACME_Account'ACME_Registration_Request 1
+                         1`("www.co1-website.com",(3127,7),0)++
+1`("www.co2-website.com",(5767,41),0)++
+1`("www.co3-website.com",(7387,7),0)++
+1`("www.co4-website.com",(4087,17),0)
+     Register_ACME_Account'ACME_Registration_Request_Signed 1
+                         1`("www.co1-website.com",(3127,7),2117)++
+1`("www.co2-website.com",(5767,41),983)++
+1`("www.co3-website.com",(7387,7),6895)++
+1`("www.co4-website.com",(4087,17),3038)
+     Top'ACME_Account_Registered 1
+                         1`("www.co1-website.com",((3127,7),(3127,431)),true)++
+1`("www.co2-website.com",((5767,41),(5767,137)),true)++
+1`("www.co3-website.com",((7387,7),(7387,1031)),true)++
+1`("www.co4-website.com",((4087,17),(4087,233)),true)
+     Top'ACME_KeyPair 1  1`("www.co1-website.com",((3127,7),(3127,431)),false)++
+1`("www.co2-website.com",((5767,41),(5767,137)),false)++
+1`("www.co3-website.com",((7387,7),(7387,1031)),false)++
+1`("www.co4-website.com",((4087,17),(4087,233)),false)
+     Top'CA_KeyPair 1    1`("CA1",(25877,5),(25877,20429),"ca1")
+     Top'CA_Wallet 1     1`("0x1",("ca1_wallet_pubkey","ca1_wallet_privkey"),"0x001",100,((0,0),(0,0)))
+     Top'CO_KeyPair 1    1`("www.co1-website.com",(33017,7),(33017,4663),"co1_website")++
+1`("www.co2-website.com",(83767,13),(83767,6397),"co2_website")++
+1`("www.co3-website.com",(69451,5),(69451,13781),"co3_website")++
+1`("www.co4-website.com",(50299,3),(50299,33227),"co4_website")
+     Top'CO_Wallet 1     1`("0x3",("co1_pubkey","co1_privkey"),"0x003",100,((4309,41),(4309,101)))++
+1`("0x4",("co2_pubkey","co2_privkey"),"0x004",100,((5891,29),(5891,197)))++
+1`("0x5",("co3_pubkey","co3_privkey"),"0x005",100,((3403,17),(3403,193)))++
+1`("0x6",("co4_pubkey","co4_privkey"),"0x006",100,((5777,41),(5777,137)))
+     Top'CO_wants_to_create_CSR 1
+                         1`(("www.co1-website.com",(33017,7),"co1_website","CA1",(25877,5),"ca1","02/02/2021","02/02/2022","",0,0,""),"0x3")++
+1`(("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","",0,0,""),"0x4")++
+1`(("www.co3-website.com",(69451,5),"co3_website","CA1",(25877,5),"ca1","04/04/2021","04/04/2022","",0,0,""),"0x5")++
+1`(("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","",0,0,""),"0x6")
+     Top'Certificate_ready_to_be_verified_by_End_User 1
+                         1`("www.co1-website.com",(33017,7),"co1_website","CA1",(25877,5),"ca1","02/02/2021","02/02/2022","0xmultisig1",13470,1144,"12.02.2021")++
+1`("www.co2-website.com",(83767,13),"co2_website","CA1",(25877,5),"ca1","03/03/2021","03/03/2022","0xmultisig2",10485,1803,"12.02.2021")++
+1`("www.co3-website.com",(69451,5),"co3_website","CA1",(25877,5),"ca1","04/04/2021","04/04/2022","0xmultisig3",7576,2194,"12.02.2021")++
+1`("www.co4-website.com",(50299,3),"co4_website","CA1",(25877,5),"ca1","05/05/2021","05/05/2022","0xmultisig4",9832,1825,"12.02.2021")
+
+  Best Lower Multi-set Bounds
+     ACME_Validation'ACME_Order_Created 1
+                         empty
+     ACME_Validation'ACME_Order_Verified 1
+                         empty
+     ACME_Validation'CA_receives_signed_validation_response 1
+                         empty
+     ACME_Validation'CO_Receives_Validation_Request 1
+                         empty
+     ACME_Validation'CO_Wallet_Validation_Challenge 1
+                         empty
+     ACME_Validation'CSR_Identifiers_to_be_validated 1
+                         empty
+     ACME_Validation'Random_Number 1
+                         1`29
+     Generate_Certificate'CA_wants_to_Sign_Certificate 1
+                         empty
+     Generate_Certificate'CA_wants_to_generate_wallet 1
+                         empty
+     Generate_Certificate'CSR_Identifiers_Validated 1
+                         empty
+     Generate_Certificate'CSR_sent_to_CA 1
+                         empty
+     Generate_Certificate'Certificate_Generated 1
+                         empty
+     Generate_Certificate'Certificate_Signed 1
+                         empty
+     Generate_Certificate'Certificate_to_be_Signed 1
+                         empty
+     Generate_Certificate'Date 1
+                         1`"12.02.2021"
+     Generate_Certificate'Multisig_Wallet_to_be_Created 1
+                         empty
+     Generate_Certificate'multisig_addresses 1
+                         empty
+     Register_ACME_Account'ACME_Registration_Request 1
+                         empty
+     Register_ACME_Account'ACME_Registration_Request_Signed 1
+                         empty
+     Top'ACME_Account_Registered 1
+                         empty
+     Top'ACME_KeyPair 1  empty
+     Top'CA_KeyPair 1    1`("CA1",(25877,5),(25877,20429),"ca1")
+     Top'CA_Wallet 1     1`("0x1",("ca1_wallet_pubkey","ca1_wallet_privkey"),"0x001",100,((0,0),(0,0)))
+     Top'CO_KeyPair 1    1`("www.co1-website.com",(33017,7),(33017,4663),"co1_website")++
+1`("www.co2-website.com",(83767,13),(83767,6397),"co2_website")++
+1`("www.co3-website.com",(69451,5),(69451,13781),"co3_website")++
+1`("www.co4-website.com",(50299,3),(50299,33227),"co4_website")
+     Top'CO_Wallet 1     1`("0x3",("co1_pubkey","co1_privkey"),"0x003",100,((4309,41),(4309,101)))++
+1`("0x4",("co2_pubkey","co2_privkey"),"0x004",100,((5891,29),(5891,197)))++
+1`("0x5",("co3_pubkey","co3_privkey"),"0x005",100,((3403,17),(3403,193)))++
+1`("0x6",("co4_pubkey","co4_privkey"),"0x006",100,((5777,41),(5777,137)))
+     Top'CO_wants_to_create_CSR 1
+                         empty
+     Top'Certificate_ready_to_be_verified_by_End_User 1
+                         empty
+
+
+ Home Properties
+------------------------------------------------------------------------
+
+  Home Markings
+     [53248]
+
+
+ Liveness Properties
+------------------------------------------------------------------------
+
+  Dead Markings
+     [53248]
+
+  Dead Transition Instances
+     None
+
+  Live Transition Instances
+     None
+
+
+ Fairness Properties
+------------------------------------------------------------------------
+     No infinite occurrence sequences.
